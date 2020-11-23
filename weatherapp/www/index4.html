@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>
+    weather app
+    </title>
+    </head>
+    <script>
+    function abc()
+        {
+            var x=document.getElementById("t1").value;
+            window.location.href="https://api.openweathermap.org/data/2.5/weather?q="+x+"&mode=html&appid=f7b51c0b7cadb907b68dc27882a99b4f"
+        }
+    </script>
+    <body align=center style="background-image: url(image2.png);background-size: contain;background-repeat: no-repeat;height: 40;width: 300;margin-top: 200;margin-left: 500">
+    <input type="text" id="t1" placeholder="Enter city to search" style="height: 40;width: 200"><br><br>
+        <button onclick="abc()" style="height: 40;width: 200">Get Current Weather</button>
+    </body>
+</html>
