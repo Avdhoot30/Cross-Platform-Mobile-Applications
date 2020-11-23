@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>currency converter</title>
+    </head>
+    <script>
+    function abc()
+        {
+            var x=parseInt(document.getElementById("id1").value);
+            var z=document.getElementById("s1").value;
+            if(z=="d")
+                {
+                    document.getElementById("id2").value=x*71.45
+                }
+            if(z=="p")
+                {
+                    document.getElementById("id2").value=x*86.869
+                }
+            if(z=="y")
+                {
+                    document.getElementById("id2").value=x*0.6722
+                }
+            if(z=="e")
+                {
+                    document.getElementById("id2").value=x*78.825
+                }
+        }
+    
+    
+    </script>
+<body align="center" style="background-image: url(currency1.png);background-size: contain;margin-top: 200">
+    <img src="imagecurrency.png" height="100"><br><br>
+    <label style="background-color: darkgoldenrod;font-size: 25">    Enter your value to convert:</label><input id="id1" type="text">
+<br><br>    <label style="background-color: darkgoldenrod;font-size: 25">Select currency to convert:</label>
+        <select id="s1" onclick="abc()">
+            <option></option>
+    <option value="d">Dollar</option>
+    <option value="p">Pound</option>
+            <option value="y">Yen</option>
+            <option value="e">Euro</option>
+            
+    </select>
+    <br><br><label style="background-color: darkgoldenrod;font-size: 25">Currency value in INR:</label><input id="id2" type="text" disabled>
+    
+    
+    </body>
+
+</html>
