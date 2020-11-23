@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>GPS</title>
+    </head>
+    <script>
+    function abc()
+        {
+            var x=navigator.geolocation.getCurrentPosition(onsuccess,onfail)
+            function onsuccess(position)
+            {
+         document.getElementById("t1").value=position.coords.latitude;
+        document.getElementById("t2").value=position.coords.longitude;
+            }
+            function onfail(error)
+            {
+              alert("Error:"+error.code+"\n"+"Message:"+error.message)  
+            }
+        }
+    function jspm()
+        {
+            var x=document.getElementById("t1").value
+            var y=document.getElementById("t2").value
+             window.location.href="https://www.latlong.net/c/?lat="+x+"&long="+y; 
+        }
+    </script>
+<body align=center style="background-image: url(img1.png);background-size: cover;background-repeat: no-repeat"> 
+    <button onclick="abc()" style="height: 40;width: 300;margin-top: 200">Live Location</button><br><br>
+    <label>Latitude</label>
+    <input type="text" id="t1" disabled placeholder="latitude"><br><br>
+    <Label>Longitude</Label>
+    <input type="text" id="t2" disabled placeholder="longitude"><br><br>
+    <button onclick="jspm()" style="height: 40;width: 300">Go to maps</button><br><br>
+    </body>
+</html>
+
+
+
+ 
